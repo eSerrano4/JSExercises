@@ -8,6 +8,18 @@ function reverseArray(list) {
   return arr;
 }
 
-//console.log(reverseArray(["A", "B", "C"]));
+console.log(reverseArray(["A", "B", "C", "D"]));
 
-function reverseArrayInPlace() {}
+let arrayValue = ["one", "two", "three"];
+function reverseArrayInPlace(arr) {
+  //for loop that loops til it hits half the legnth of array
+  for (var j = 0; j <= arr.length / 2; j++) {
+    //creates temporary array that holds the value in reverse order
+    let tempArr = arr[j];
+    arr[j] = arr[arr.length - 1 - j];
+    arr[arr.length - 1 - j] = tempArr;
+  }
+  return arr;
+}
+
+console.log(reverseArrayInPlace(arrayValue));
